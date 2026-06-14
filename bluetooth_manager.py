@@ -1,6 +1,3 @@
-"""
-Bluetooth Manager - waits for A2DP connection from phone/laptop.
-"""
 import time, subprocess, logging
 log = logging.getLogger("bluetooth")
 

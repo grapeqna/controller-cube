@@ -1,11 +1,9 @@
 """
-Gesture Handler - processes IMU events and triggers audio, display and LED actions.
-
-- 1 tap   -> play/pause
-- 2 taps  -> volume up
-- 3 taps  -> volume down
-- Rotate cube CW/CCW (about Z axis) -> next/previous song
-- Shake          -> power on/off
+1 tap   -> play/pause
+2 taps  -> volume up
+3 taps  -> volume down
+rotate -> next/previous song
+shake -> power on/off
 """
 import time, threading, logging
 log = logging.getLogger("gesture")

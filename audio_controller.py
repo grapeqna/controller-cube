@@ -1,6 +1,3 @@
-"""
-Audio Controller - controls Bluetooth playback via playerctl and volume via softvol.
-"""
 import subprocess, logging
 log = logging.getLogger("audio")
 VOLUME_STEP = 5
@@ -63,7 +60,6 @@ class AudioController:
 
     def _set_volume(self, level):
         try:
-            # PCM5102A has no hardware volume control, use softvol via amixer on card 3
             subprocess.run(
                 ["amixer", "-c", "3", "set", "PCM", f"{level}%"],
                 capture_output=True, timeout=3
